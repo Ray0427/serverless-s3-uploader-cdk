@@ -24,6 +24,24 @@ $ npm install
  * `cdk diff`        compare deployed stack with current state
  * `cdk synth`       emits the synthesized CloudFormation template
 
+## Sequence
+
+```mermaid
+sequenceDiagram
+participant C as Client
+participant A as API Gateway
+participant L as Lambda
+participant S as S3
+C ->> A: Get Pre-signed URL
+A ->> L: Call handler
+L ->> A: Return Pre-signed URL
+A ->> C: Response Pre-signed URL
+C ->> S: PUT object to Pre-signed URL
+```
+
+
+
 ## Reference
+
 - [Serverless S3 Uploader](https://github.com/jbesw/sar-s3-serverless-uploader)
 - [AWS CDK Developer Guide](https://docs.aws.amazon.com/cdk/latest/guide/home.html)

@@ -48,7 +48,7 @@ export class ServerlessS3UploaderStack extends cdk.Stack {
         `${bucket.bucketArn}/*`,
       ],
     });
-    uploadFunction.addToRolePolicy(s3CrudPolicy)
+    uploadFunction.addToRolePolicy(s3CrudPolicy);
     const uploadIntegration = new apigateway.LambdaIntegration(uploadFunction, {});
     api.root.addMethod('GET', uploadIntegration);
     new cdk.CfnOutput(this, 'S3UploaderFunction', {
