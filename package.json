@@ -27,5 +27,27 @@
     "@aws-cdk/aws-s3": "^1.52.0",
     "@aws-cdk/core": "^1.52.0",
     "source-map-support": "^0.5.16"
-  }
+  },
+  "description": "This is a blank project for TypeScript development with CDK.",
+  "directories": {
+    "lib": "lib",
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ray0427/serverless-s3-uploader-cdk.git"
+  },
+  "keywords": [
+    "CDK",
+    "serverless",
+    "s3",
+    "lambda",
+    "api-gateway"
+  ],
+  "author": "Ray0427 (https://github.com/Ray0427)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Ray0427/serverless-s3-uploader-cdk/issues"
+  },
+  "homepage": "https://github.com/Ray0427/serverless-s3-uploader-cdk#readme"
 }
